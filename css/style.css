@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box-ex{
+    width: 100%;
+    height: 400px;
+    background: grey;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title{
+    display: block;
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+.square{
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+.hover:hover{
+    background: black;
+}
+
+.square.active{
+    width: 850px;
+}
+
+.black{
+    background: black;
+}
+
+.circle:hover{
+    border-radius: 150px;;
+}
+
+.canc:hover{
+    background: transparent;
+}
+
+.bigger:hover{
+    width: 300px;
+    height: 300px;
+}
+
+.square.smaller{
+    width: 200px;
+    height: 200px;
+}
+
+.fly{
+    height: 280px;
+    margin-bottom: 20px;
+    transition: all;
+}
+
+.gray:hover{
+    filter: grayscale(100%);
+}
+
+.bright{
+    transition-duration: 1s;
+}
+
+.bright:hover{
+    filter: brightness(200%);
+    filter: saturate(200%);
+}
+
+.nature{
+    height: 250px;
+    margin-bottom: 40px;
+    transition: all 1s;
+}
+
+.nature:hover{
+    filter: saturate(200%);
+    filter: sepia(40%);
+    border-radius: 30px;
+}
+
+.scale:hover{
+    height: 280px;
+    margin-bottom: 20px;
+}
+
+.loader{
+    font-size: 100px;
+    margin-bottom:100px;
+}
+
+.loader-hover:hover{
+    animation: half-spin 2s ease-in;
+}
+
+.animation-loader{
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(360deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes half-spin{
+    0%{
+        transform: rotate(0%);
+    }
+    90%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.test{
+    width: 300px;
+    height: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 100px;
+    position: relative;
+    border: 3px solid black;
+}
+
+.void{
+    width: 60px;
+    height: 30px;
+    background: gray;
+    position: absolute;
+}
+
+.top-void{
+    top: -3px;
+    left: 20px;
+}
+
+.bottom-void{
+    bottom: -3px;
+    right: 20px;
+}
+
+.test:hover .top-void {
+    animation: movespacetop 1s linear;
+}
+
+.test:hover .bottom-void{
+    animation: movespacebottom 1s linear;
+}
+
+@keyframes movespacetop{
+    0%{
+        left: 20px;
+    }
+    50%{
+        left: 220px;
+    }
+    100%{
+        left: 20px;
+    }
+}
+
+@keyframes movespacebottom{
+    0%{
+        right: 20px;
+    }
+    50%{
+        right: 220px;
+    }
+    100%{
+        right: 20px;
+    }
+}
+
+.top-circle{
+    top: -3px;
+    left: 20px;
+}
+
+.bottom-circle{
+    bottom: -3px;
+    right: 20px;
+}
+
+.test:hover .top-circle{
+    animation: movetopcircle 2s linear;
+}
+
+.test:hover .bottom-circle{
+    animation: movebotcircle 2s linear;
+}
+
+@keyframes movetopcircle{
+    0%{
+        left: 20px;
+        top: -3px;
+    }
+    30%{
+        left: 100%;
+        top: -3px;
+    }
+    45%{
+        left: 100%;
+        top: 100%;
+    }
+    75%{
+        left: 0px;
+        top: 100%;
+    }
+    90%{
+        left: -3px;
+        top: -3px;
+    }
+    100%{
+        left: 20px;
+        top: -3px;
+    }
+}
+
+@keyframes movebotcircle{
+    0%{
+        bottom: -3px;
+        right: 20px;
+    }
+    30%{
+        bottom: -3px;
+        right: 100%;
+    }
+    45%{
+        bottom: 100%;
+        right: 100%;
+    }
+    75%{
+        bottom: 100%;
+        right: -3px;
+    }
+    90%{
+        bottom: -3px;
+        right: -3px;
+    }
+    100%{
+        bottom: -3px;
+        right: 20px;
+    }
+}
+
+
